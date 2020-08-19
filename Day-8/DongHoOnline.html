@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dong Ho Online</title>
+
+    <script>
+
+        
+
+        function StartTime(){
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+
+            m = checkTime(m);
+            s = checkTime(s);
+
+            document.getElementById("timer").innerHTML = h + ":" + m + ":" + s;
+
+            function checkTime(i){
+                    if(i < 10){
+                        i = "0" + i;
+                    }
+                    return i;
+                }
+            
+
+            setInterval("timer()",1000);
+
+                
+        }
+
+    </script>
+    
+</head>
+<body onload="StartTime()">
+    
+
+    <p id="timer"></p>    
+
+</body>
+</html>
